@@ -1,0 +1,1090 @@
+local UILibrary =
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/twink"))()
+
+function Chat(NovaPurge)
+    game.Players:Chat(NovaPurge)
+end
+
+assert(getrawmetatable)
+gmt = getrawmetatable(game)
+setreadonly(gmt, false)
+old = gmt.__namecall
+gmt.__namecall =
+    newcclosure(
+        function(self, ...)
+        local args = {...}
+        if tostring(args[1]) == "BreathingHAMON" then
+            return
+        elseif tostring(args[1]) == "TeleportDetect" then
+            return
+        elseif tostring(args[1]) == "CHECKER_1" then
+            return
+        elseif tostring(args[1]) == "CHECKER" then
+            return
+        elseif tostring(args[1]) == "GUI_CHECK" then
+            return
+        elseif tostring(args[1]) == "OneMoreTime" then
+            return
+        elseif tostring(args[1]) == "checkingSPEED" then
+            return
+        elseif tostring(args[1]) == "BANREMOTE" then
+            return
+        elseif tostring(args[1]) == "PERMAIDBAN" then
+            return
+        elseif tostring(args[1]) == "KICKREMOTE" then
+            return
+        elseif tostring(args[1]) == "BR_KICKPC" then
+            return end
+
+    return old(self, ...)
+end)
+--// [Creating Gui]
+local MainUI = UILibrary.Load("Ticxyy Gui Stand")
+--// [Tabs]
+local FirstPage = MainUI.AddPage("Combat!")
+local SecondPage = MainUI.AddPage("Misc!")
+local ThirdPage = MainUI.AddPage("Teleports!")
+local FourthPage = MainUI.AddPage("Toggles!")
+local FifthPage = MainUI.AddPage("Target CMDS")
+local SixthPage = MainUI.AddPage("Stand Positons")
+local SeventhPage = MainUI.AddPage("Police")
+local EighthPage = MainUI.AddPage("Attack Modes")
+local NinthPage = MainUI.AddPage("Fly Modes")
+local TenthPage = MainUI.AddPage("Mask Modes")
+
+local Drop =
+    FirstPage.AddButton(
+    "Stop Audio!",
+    function()
+        game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer('StopAudio!', 'All');
+    end
+)
+
+local Drop =
+    FirstPage.AddButton(
+    "Drop!",
+    function()
+        game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer('Drop!', 'All');
+    end
+)
+
+local Sky =
+    FirstPage.AddButton(
+    "skyanti! - sky antilock",
+    function()
+        game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer('skyanti!', 'All');
+    end
+)
+
+local Void =
+    FirstPage.AddButton(
+    "Void!",
+    function()
+        game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer('Void!', 'All');
+    end
+)
+
+local Jail =
+    FirstPage.AddButton(
+    "Jail!",
+    function()
+        game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer('Jail!', 'All');
+    end
+)
+
+local Hide =
+    FirstPage.AddButton(
+    "Hide!",
+    function()
+        game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer('Hide!', 'All');
+    end
+)
+
+local Lettuce =
+    FirstPage.AddButton(
+    "Lettuce!",
+    function()
+        game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer('Lettuce!', 'All');
+    end
+)
+
+local Muda =
+    FirstPage.AddButton(
+    "Muda!",
+    function()
+        game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer('Muda!', 'All');
+    end
+)
+
+local Ora =
+    FirstPage.AddButton(
+    "Ora!",
+    function()
+        game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer('Ora!', 'All');
+    end
+)
+
+local Save =
+    FirstPage.AddButton(
+    "Save!",
+    function()
+        game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer('Save!', 'All');
+    end
+)
+
+local Defaul =
+    FirstPage.AddButton(
+    "Default!",
+    function()
+game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer('Default!', 'All');
+    end
+)
+
+local Hidden =
+    FirstPage.AddButton(
+    "Hidden!",
+    function()
+game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer('Hidden!', 'All');
+    end
+)
+
+local Misc =
+    SecondPage.AddLabel(
+    "Misc.",
+    function()
+    end
+)
+
+local Heal =
+    SecondPage.AddButton(
+    "Heal!",
+    function()
+game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer('Heal!', 'All');
+    end
+)
+
+local Weight =
+    SecondPage.AddButton(
+    "Weight!",
+    function()
+game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer('Weight!', 'All');
+    end
+)
+
+local AdvancedSet =
+    SecondPage.AddButton(
+    "Moveset2!",
+    function()
+game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer('Moveset2!', 'All');
+    end
+)
+
+local BasicSet =
+    SecondPage.AddButton(
+    "Moveset1!",
+    function()
+game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer('Moveset1!', 'All');
+    end
+)
+
+local Throw =
+    SecondPage.AddButton(
+    "Throw!",
+    function()
+game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer('Throw!', 'All');
+    end
+)
+
+local Bag =
+    FifthPage.AddLabel(
+    ".Bag [plr] - stand bags plr",
+    function()
+    end
+)
+
+local Unblock =
+    SecondPage.AddButton(
+    "Unblock!",
+    function()
+game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer('Unblock!', 'All');
+    end
+)
+
+local Boxinger =
+    SecondPage.AddButton(
+    "Boxing! - Stand Boxes",
+    function()
+game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer('Boxing!', 'All');
+    end
+)
+
+local PoserTure3 =
+    SecondPage.AddButton(
+    "Pose3",
+    function()
+game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer('Pose3', 'All');
+    end
+)
+
+local Pose2 =
+    SecondPage.AddButton(
+    "Pose2",
+    function()
+game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer('Pose2', 'All');
+    end
+)
+
+local Posture1 =
+    SecondPage.AddButton(
+    "Pose1",
+    function()
+game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer('Pose1', 'All');
+    end
+)
+
+local Leave =
+    SecondPage.AddButton(
+    "Leave!",
+    function()
+        game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer('Leave!', 'All');
+    end
+)
+
+local Weld =
+    SecondPage.AddButton(
+    "Weld!",
+    function()
+game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer('Weld!', 'All');
+    end
+)
+
+local Rejoin =
+    SecondPage.AddButton(
+    "Rejoin!",
+    function()
+        game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer('Rejoin!', 'All');
+    end
+)
+
+local Synapse =
+    SecondPage.AddButton(
+    "Gun!",
+    function()
+        game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer('Gun!', 'All');
+    end
+)
+
+local Reset =
+    SecondPage.AddButton(
+    "Re!",
+    function()
+        game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer('Re!', 'All');
+    end
+)
+
+local Evolve =
+    SecondPage.AddButton(
+    "say!",
+    function()
+        game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer('say! yo yo yooo', 'All');
+    end
+)
+
+local DropCash =
+    SecondPage.AddButton(
+    "DropCash!",
+    function()
+        game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer('Dcash!', 'All');
+    end
+)
+
+local Lowgfx =
+    SecondPage.AddButton(
+    "Lowgfx!",
+    function()game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer('Lowgfx!', 'All');
+    end
+)
+
+local Sneek =
+    SecondPage.AddButton(
+    "Sneak!",
+    function()
+game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer('Sneak!', 'All');
+    end
+)
+
+local Teleports =
+    ThirdPage.AddLabel(
+    "Teleportaions!",
+    function()
+    end
+)
+
+local ToBank =
+    ThirdPage.AddButton(
+    ".tp bank",
+    function()
+        game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer('.tp bank', 'All');
+    end
+)
+
+local ToBase =
+    ThirdPage.AddButton(
+    ".tp bull",
+    function()
+        game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer('.tp bull', 'All');
+    end
+)
+
+local ToShop =
+    ThirdPage.AddButton(
+    ".tp shop1",
+    function()
+        game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer('.tp shop1', 'All');
+    end
+)
+
+local ToShopp =
+    ThirdPage.AddButton(
+    ".tp shop2",
+    function()
+        game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer('.tp shop2', 'All');
+    end
+)
+
+local ToClub =
+    ThirdPage.AddButton(
+    ".tp club",
+    function()
+        game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer('.tp club', 'All');
+    end
+)
+
+local ToSchool =
+    ThirdPage.AddButton(
+    ".tp school",
+    function()
+        game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer('.tp school', 'All');
+    end
+)
+
+local ToPark =
+    ThirdPage.AddButton(
+    ".tp park",
+    function()
+        game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer('.tp park', 'All');
+    end
+)
+
+local ToUfo =
+    ThirdPage.AddButton(
+    ".tp ufo",
+    function()
+        game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer('.tp ufo', 'All');
+    end
+)
+
+
+local ToCasino =
+    ThirdPage.AddButton(
+    ".tp casino",
+    function()
+        game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer('.tp casino', 'All');
+    end
+)
+
+local ToSafe1 =
+    ThirdPage.AddButton(
+    ".tp safe1",
+    function()
+game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer('.tp safe1', 'All');
+    end
+)
+
+local ToSafe2 =
+    ThirdPage.AddButton(
+    ".tp safe2",
+    function()
+game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer('.tp safe2', 'All');
+    end
+)
+
+local ToSafe3 =
+    ThirdPage.AddButton(
+    ".tp safe3",
+    function()
+game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer('.tp safe3', 'All');
+    end
+)
+
+local ToSafe4 =
+    ThirdPage.AddButton(
+    ".tp safe4",
+    function()
+game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer('.tp safe4', 'All');
+    end
+)
+
+local ToSafe5 =
+    ThirdPage.AddButton(
+    ".tp safe5",
+    function()
+game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer('.tp safe5', 'All');
+    end
+)
+
+local mil =
+    ThirdPage.AddButton(
+    ".tp mil",
+    function()
+game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer('.tp mil', 'All');
+    end
+)
+
+local ToRoof =
+    ThirdPage.AddButton(
+    ".tp Roof",
+    function()
+game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer('.tp Roof', 'All');
+    end
+)
+
+local ToWheel =
+    ThirdPage.AddButton(
+    ".tp wheel",
+    function()
+game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer('.tp wheel', 'All');
+    end
+)
+
+local ToRev =
+    ThirdPage.AddButton(
+    ".tp rev",
+    function()
+game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer('.tp rev', 'All');
+    end
+)
+
+local ToDb =
+    ThirdPage.AddButton(
+    ".tp db",
+    function()
+game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer('.tp db', 'All');
+    end
+)
+
+local ToPool =
+    ThirdPage.AddButton(
+    ".tp pool",
+    function()
+game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer('.tp pool', 'All');
+    end
+)
+
+local ToBoxing =
+    ThirdPage.AddButton(
+    ".tp boxing",
+    function()
+game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer('.tp boxing', 'All');
+    end
+)
+
+local ToBasketBall =
+    ThirdPage.AddButton(
+    ".tp basketball",
+    function()
+game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer('.tp basketball', 'All');
+    end
+)
+
+local ToSewer =
+    ThirdPage.AddButton(
+    ".tp sewer",
+    function()
+game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer('.tp sewer', 'All');
+    end
+)
+
+local ToSubway =
+    ThirdPage.AddButton(
+    ".tp subway",
+    function()
+game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer('.tp subway', 'All');
+    end
+)
+
+local Police =
+    SeventhPage.AddLabel(
+    "Police!",
+    function()
+game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer('Police', 'All');
+    end
+)
+
+local Unjail =
+    FifthPage.AddLabel(
+    "Unjail! [plr] - Stand Gets Key And Unjails player",
+    function()
+    end
+)
+
+local UnjailSelf =
+    SeventhPage.AddButton(
+    "Unjail! - unjails you",
+    function()
+game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer('Unjail!', 'All');
+    end
+)
+
+local ArrestNPolice =
+    FifthPage.AddLabel(
+    ".arrest [plr] - stand arrests plr if police",
+    function()
+    end
+)
+local PoliceGUI =
+    SeventhPage.AddButton(
+    "Police!",
+    function()
+game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer('Police!', 'All');
+    end
+)
+
+
+
+local cmds =
+    FourthPage.AddLabel(
+    "Toggles!",
+    function()
+    end
+)
+
+local SummonNStop =
+    FourthPage.AddToggle(
+    "Summon / Stop!",
+    false,
+    function(bool)
+        if bool then
+            game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer('Summon!', 'All');
+        else
+            game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer('Stop!', 'All');
+        end
+    end
+)
+
+local Playing =
+    FourthPage.AddToggle(
+    "Play Song! / Stop Song!",
+    false,
+    function(bool)
+        if bool then
+            game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer('Song!', 'All');
+        else
+            game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer('StopAudio!', 'All');
+        end
+    end
+)
+
+local GkillNUnattack =
+    FourthPage.AddToggle(
+    ".gkill / Unattack!",
+    false,
+    function(bool)
+        if bool then
+            game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer('.gkill', 'All');
+        else
+            game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer('Unattack!', 'All');
+        end
+    end
+)
+
+local MimicUnMimic =
+    FourthPage.AddToggle(
+    "Mimic! / Unmimic!",
+    false,
+    function(bool)
+        if bool then
+            game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer('Mimic!', 'All');
+        else
+            game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer('Unmimic!', 'All');
+        end
+    end
+)
+
+local AttackUnAttack =
+    FourthPage.AddToggle(
+    "Attack! / Unattack!",
+    false,
+    function(bool)
+        if bool then
+            game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer('Attack!', 'All');
+        else
+            game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer('Unattack!', 'All');
+        end
+    end
+)
+
+local auranoaura =
+    FourthPage.AddToggle(
+    "Aura! / Noaura!!",
+    false,
+    function(bool)
+        if bool then
+            game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer('Aura!', 'All');
+        else
+            game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer('Noaura!', 'All');
+        end
+    end
+)
+
+local Bing =
+    FourthPage.AddToggle(
+    "Autodrop! / Unautodrop!",
+    false,
+    function(bool)
+        if bool then
+            game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer('Autodrop!', 'All');
+        else
+            game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer('Unautodrop!', 'All');
+        end
+    end
+)
+
+local HideNShow =
+    FourthPage.AddToggle(
+    "hidesc! / showsc!",
+    false,
+    function(bool)
+        if bool then
+            game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer('hidesc!', 'All');
+        else
+            game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer('showsc!', 'All');
+        end
+    end
+)
+
+local CrewUncrew =
+    FourthPage.AddToggle(
+    "Crew! / Uncrew!",
+    false,
+    function(bool)
+        if bool then
+            game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer('Crew!', 'All');
+        else
+            game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer('Uncrew!', 'All');
+        end
+    end
+)
+
+local WalletUnwallet =
+    FourthPage.AddToggle(
+    "Wallet! / Unwallet!",
+    false,
+    function(bool)
+        if bool then
+            game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer('Wallet!', 'All');
+        else
+            game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer('Unwallet!', 'All');
+        end
+    end
+)
+
+local Bind =
+    FourthPage.AddToggle(
+    "Bind! / Unbind!",
+    false,
+    function(bool)
+        if bool then
+            game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer('Bind!', 'All');
+        else
+            game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer('Unbind!', 'All');
+        end
+    end
+)
+
+local CauraAndUncaura =
+    FourthPage.AddToggle(
+    "Caura! / Uncaura!",
+    false,
+    function(bool)
+        if bool then
+            game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer('Caura!', 'All');
+        else
+            game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer('Uncaura!', 'All');
+        end
+    end
+)
+
+local VanishAppear =
+    FourthPage.AddToggle(
+    "Vanish / Appear!",
+    false,
+    function(bool)
+        if bool then
+            game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer('Vanish!', 'All');
+        else
+            game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer('Appear!', 'All');
+        end
+    end
+)
+
+local Resol =
+    FourthPage.AddToggle(
+    "Resolver / Unresolver!",
+    false,
+    function(bool)
+        if bool then
+            game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer('Resolver!', 'All');
+        else
+            game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer('Unresolver!', 'All');
+        end
+    end
+)
+
+local Autosavenautosave =
+    FourthPage.AddToggle(
+    "Autosave! / Unautosave!",
+    false,
+    function(bool)
+        if bool then
+            game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer('Autosave!', 'All');
+        else
+            game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer('Unautosave!', 'All');
+        end
+    end
+)
+
+local HeavyLight =
+    FourthPage.AddToggle(
+    "Heavy! / Light!",
+    false,
+    function(bool)
+        if bool then
+            game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer('Heavy!', 'All');
+        else
+            game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer('Light!', 'All');
+        end
+    end
+)
+
+local BarrageNobarrage =
+    FourthPage.AddToggle(
+    "Barrage! / Nobarrage!",
+    false,
+    function(bool)
+        if bool then
+            game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer('Barrage!', 'All');
+        else
+            game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer('Nobarrage!', 'All');
+        end
+    end
+)
+
+local StabNUnstab =
+    FourthPage.AddToggle(
+    "Stab! / Unstab!",
+    false,
+    function(bool)
+        if bool then
+            game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer('Stab!', 'All');
+        else
+            game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer('Unstab!', 'All');
+        end
+    end
+)
+
+local Automask =
+    FourthPage.AddToggle(
+    "Automask! / Unautomask!",
+    false,
+    function(bool)
+        if bool then
+            game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer('Auto!', 'All');
+        else
+            game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer('Unautomask!', 'All');
+        end
+    end
+)
+
+local view =
+    FifthPage.AddLabel(
+    ".view [plr] - stand view plr",
+    function()
+    end
+)
+
+local Frame =
+    FifthPage.AddLabel(
+    ".Frame [plr] - gives stand to plr to frame them",
+    function()
+    end
+)
+
+local Redeem =
+    FifthPage.AddLabel(
+    "Redeem! [code] - Stand Redeem Code",
+    function()
+    end
+)
+
+local b =
+    FifthPage.AddLabel(
+    ".bring [plr] - brings a player",
+    function()
+    end
+)
+
+local t =
+    FifthPage.AddLabel(
+    ".knock - knocks a player",
+    function()
+    end
+)
+
+local tt =
+    FifthPage.AddLabel(
+    ".autokill [plr] - loop kills the player",
+    function()
+    end
+)
+
+local Stomp =
+    FifthPage.AddLabel(
+    ".Stomp [plr] - stomps plr",
+    function()
+    end
+)
+
+local annoy =
+    FifthPage.AddLabel(
+    ".Annoy [plr] - annoys plr by spam punching",
+    function()
+    end
+)
+
+local Kannoy =
+    FifthPage.AddLabel(
+    ".Kannoy [plr] - Annoy But Heavy Attack",
+    function()
+    end
+)
+
+local Gun =
+    FifthPage.AddLabel(
+    "Gun CMDS",
+    function()
+    end
+)
+
+local gunknock =
+    FifthPage.AddLabel(
+    ".gknock [plr] - gun knocks plr",
+    function()
+    end
+)
+
+local gunbring =
+    FifthPage.AddLabel(
+    ".gbring [plr] - gun brings plr",
+    function()
+    end
+)
+
+local gstomp =
+    FifthPage.AddLabel(
+    ".gstomp [plr] - Gun Stomps plr",
+    function()
+    end
+)
+
+local GunBought =
+    FifthPage.AddLabel(
+    "Gun! - Buys LMG For Cmds To Work",
+    function()
+    end
+)
+
+local AttackModes =
+    EighthPage.AddLabel(
+    "Attack Modes",
+    function()
+    end
+)
+
+local Combat =
+    EighthPage.AddButton(
+    "Combat!",
+    function()
+game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer('Combat!', 'All');
+    end
+)
+
+local Sign =
+    EighthPage.AddButton(
+    "Sign!",
+    function()
+game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer('Sign!', 'All');
+    end
+)
+
+local Pitch =
+    EighthPage.AddButton(
+    "Pitch!",
+    function()
+game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer('Pitch!', 'All');
+    end
+)
+
+local Knife =
+    EighthPage.AddButton(
+    "Knife!",
+    function()
+game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer('Knife!', 'All');
+    end
+)
+
+local StandPos =
+    SixthPage.AddLabel(
+    "Stand Positon",
+    function()
+    end
+)
+
+local Alt =
+    SixthPage.AddButton(
+    "Alt!",
+    function()
+game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer('Alt!', 'All');
+    end
+)
+
+local Back =
+    SixthPage.AddButton(
+    "Back!",
+    function()
+game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer('Back!', 'All');
+    end
+)
+
+local cmds =
+    SixthPage.AddButton(
+    "Right!",
+    function()
+game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer('Right!', 'All');
+    end
+)
+
+local Left =
+    SixthPage.AddButton(
+    "Left!",
+    function()
+game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer('Left!', 'All');
+    end
+)
+
+local cmds =
+    NinthPage.AddLabel(
+    "Fly Modes",
+    function()
+    end
+)
+
+local Fly1 =
+    NinthPage.AddButton(
+    ".FlyV1",
+    function()
+game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer('.FlyV1', 'All');
+    end
+)
+
+local Heavenly =
+    NinthPage.AddButton(
+    ".Heaven",
+    function()
+game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer('.Heaven', 'All');
+    end
+)
+
+local Flyer2 =
+    NinthPage.AddButton(
+    ".FlyV2",
+    function()
+game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer('.FlyV2', 'All');
+    end
+)
+
+local Hovering =
+    NinthPage.AddButton(
+    ".Hover",
+    function()
+game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer('.Hover', 'All');
+    end
+)
+
+local Glider =
+    NinthPage.AddButton(
+    ".Glide",
+    function()
+game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer('.Glide', 'All');
+    end
+)
+local MaskerModes =
+    TenthPage.AddLabel(
+    "Mask Modes.",
+    function()
+    end
+)
+
+local pumper =
+    TenthPage.AddButton(
+    ".pumpkin",
+    function()
+game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer('.pumpkin', 'All');
+    end
+)
+
+local Hockeyery =
+    TenthPage.AddButton(
+    ".hockey",
+    function()
+game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer('.hockey', 'All');
+    end
+)
+
+local paintballs=
+    TenthPage.AddButton(
+    ".paintball",
+    function()
+game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer('.paintball', 'All');
+    end
+)
+
+local ninjareye =
+    TenthPage.AddButton(
+    ".ninja",
+    function()
+game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer('.ninja', 'All');
+    end
+)
+
+local RiotingModer =
+    TenthPage.AddButton(
+    ".riot",
+    function()
+game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer('.riot', 'All');
+    end
+)
+
+local Credit  =
+    FirstPage.AddLabel(
+    "Owner : imposter#1324",
+    function()
+    end
+)
+
+local Credit  =
+    FirstPage.AddLabel(
+    "Co Owner: jdjcxbdnfnfn",
+    function()
+    end
+)
